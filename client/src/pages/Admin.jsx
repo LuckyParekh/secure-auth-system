@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+const API = import.meta.env.VITE_API_URL;
 
 function Admin() {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ function Admin() {
       }
 
       try {
-        const res = await axios.get("http://localhost:5000/api/admin", {
+        const res = await axios.get(`${API}/api/admin`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

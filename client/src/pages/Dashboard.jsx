@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+const API = import.meta.env.VITE_API_URL;
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ function Dashboard() {
       }
 
       try {
-        const res = await axios.get("http://localhost:5000/api/dashboard", {
+        const res = await axios.get(`${API}/api/dashboard`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

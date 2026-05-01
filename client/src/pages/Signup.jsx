@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+const API = import.meta.env.VITE_API_URL;
 
 function Signup() {
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ useEffect(() => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/signup",
+        `${API}/api/auth/signup`,
         form
       );
 
