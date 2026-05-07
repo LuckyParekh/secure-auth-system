@@ -5,7 +5,7 @@ A full-stack secure login system with user authentication, role-based access (ad
 ---
 
 ## Live Demo: 
-auth.luckyparekh.com
+[Open Secure Auth System](https://auth.luckyparekh.com)
 
 ---
 
